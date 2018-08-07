@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aerobot Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="rpc.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <H3>Aerobot admin panel (beta)</H3>
+        <div class="row">
+            <div class="col-6">
+              <form>
+                <div class="form-group">
+                  <label for="lexicon">Lexicon</label>
+                  <select class="form-control" id="lexicon-select">
+                    <option>TWL3.1</option>
+                    <option>CSW15</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-primary" id="lexicon-change">Change Lexicon</button>
+              </form>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <!-- <div class="col-6">
+                        <div class="card" id="signin-card">
+                            <div class="card-header">
+                                Start Aerobot
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input class="form-control" id="username" placeholder="aerobot"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input class="form-control" id="password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="channel">Twitch channel</label>
+                                        <input class="form-control" id="channel" placeholder="#14domino" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lexicon-db">Lexicon Database</label>
+                                        <input class="form-control" id="lexicon-db" placeholder="/Users/cesar/coding/aerolith-infra/lexica/db/America.db"/>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" id="connect-btn">Connect!</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+                        <button class="btn btn-info" id="disconnect-btn">Disconnect bot</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
