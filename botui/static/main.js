@@ -1,6 +1,6 @@
 $(function() {
-  var DB_PATH = '/Users/cesar/coding/aerolith-infra/lexica/db/';
-//  var DB_PATH = '/home/ubuntu/word_db/';
+  // var DB_PATH = '/Users/cesar/coding/aerolith-infra/lexica/db/';
+  var DB_PATH = '/home/ubuntu/word_db/';
 
   $.jsonRPC.setup({
     endPoint: '/rpc',
