@@ -8,6 +8,7 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/domino14/macondo/anagrammer"
 	// sqlite3 driver
 	_ "github.com/mattn/go-sqlite3"
 	irc "github.com/thoj/go-ircevent"
@@ -37,6 +38,8 @@ func (a *Aerobot) Init(nick string, pass string, ircchan string,
 	if err != nil {
 		return err
 	}
+
+	anagrammer.LoadDawgs()
 
 	irccon := irc.IRC(nick, nick) //Create new ircobj
 	if irccon == nil {
@@ -86,6 +89,14 @@ func (a *Aerobot) Init(nick string, pass string, ircchan string,
 					irccon.SendRaw("PRIVMSG " + ircchan + " :" +
 						strings.ToUpper(word) + ": " + definition)
 				}
+
+			case "anagram":
+				if len(strs) <= 1 {
+					break
+				}
+				letters := strs[1]
+				fmt.Printf("[debug] should anagram %s", letters)
+
 			}
 		}
 	})
